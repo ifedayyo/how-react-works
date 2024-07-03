@@ -102,3 +102,11 @@ function DifferentContent() {
     </div>
   );
 }
+/**
+ * always use the key prop when you have multiple
+ * child element of the same type e.g.
+ * <ul>
+ *   <Question key="q1" question={q[0]}/>
+ *    <Question key="q2" question={q[1]}/>
+ * </ul>
+ */
