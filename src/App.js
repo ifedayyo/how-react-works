@@ -39,7 +39,10 @@ function Tabbed({ content }) {
       </div>
 
       {activeTab <= 2 ? (
-        <TabContent item={content.at(activeTab)} />
+        <TabContent
+          item={content.at(activeTab)}
+          key={content.at(activeTab).summary}
+        />
       ) : (
         <DifferentContent />
       )}
@@ -102,6 +105,7 @@ function DifferentContent() {
     </div>
   );
 }
+
 /**
  * always use the key prop when you have multiple
  * child element of the same type e.g.
